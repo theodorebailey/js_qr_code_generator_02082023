@@ -9,7 +9,14 @@
 <body>
     
     <div class="container">
-        
+        <p>Enter your text or URL</p>
+        <input type="text" placeholder="text or URL" id="qr-text">
+
+        <div id="img-box">
+            <!-- empty src to populate with qr code -->
+            <img src="" id="qr-img">
+        </div>
+        <button onclick="generateQR()">generate qr code</button>
     </div>
 
 

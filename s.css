@@ -1,4 +1,4 @@
-
+/* set default values padding margin, box-sizing and font */
 *{
     margin: 0;
     padding: 0;
@@ -6,10 +6,12 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* set background colour of body element - whole screen */
 body {
     background: #363a56;
 }
 
+/* create a container element with width padding page location background colour and rounded edges */
 .container {
     width: 400px;
     padding: 25px 25px;
@@ -21,4 +23,80 @@ body {
     /* finish centering */
     background: #fff;
     border-radius: 10px;
+}
+
+/* set paragraph in containers font weight size and margin from elements below */
+.container p{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* set width height of input field provided with a border outline padding margin and rounded edges */
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #494eea;
+    outline: 0;
+    padding: 10px;
+    margin: 20px 0 10px;
+    border-radius: 10px;
+}
+
+/* container button set width height background colour with white text and no border / outline rounded edges set some box shadow effect with a cursor pointer and margin bold text */
+.container button {
+    width: 100%;
+    height: 50px;
+    background: #494eea;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+
+#img-box {
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#img-box img{
+    width: 100%;
+    padding: 10px;
+}
+
+/* class applied when QR displays */
+#img-box.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+/* error shake animation */
+.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
