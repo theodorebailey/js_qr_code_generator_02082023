@@ -8,14 +8,20 @@
 </head>
 <body>
     
+    <!-- container class for app -->
     <div class="container">
+
+        <!-- paragraph element for text -->
         <p>Enter your text or URL</p>
+        <!-- input element to place text user styley -->
         <input type="text" placeholder="text or URL" id="qr-text">
 
+        <!-- div container to populte with qr image -->
         <div id="img-box">
             <!-- empty src to populate with qr code -->
             <img src="" id="qr-img">
         </div>
+        <!-- our button element to provide onclick functionality and generate code using function -->
         <button onclick="generateQR()">generate qr code</button>
     </div>
 
